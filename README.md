@@ -26,7 +26,7 @@ A responsive digital portfolio built with HTML, CSS and vanilla JavaScript.
 - Google Fonts
 - Simple Icons CDN
 
-## Project structure
+## Website structure
 
 ```text
 .
