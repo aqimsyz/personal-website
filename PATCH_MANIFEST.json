@@ -1,0 +1,22 @@
+{
+  "module": "06.6",
+  "name": "Verified Skill Matrix",
+  "replace": [
+    "css/projects.css",
+    "js/projects-experience.js",
+    "data/badges.js"
+  ],
+  "copy": [
+    "assets/badges"
+  ],
+  "html_changes": false,
+  "badge_count": 21,
+  "features": [
+    "featured badge beacon",
+    "pointer proximity matrix",
+    "category filtering",
+    "keyboard navigation",
+    "responsive layout",
+    "real badge images included"
+  ]
+}

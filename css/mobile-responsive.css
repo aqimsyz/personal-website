@@ -1,0 +1,2926 @@
+#projects .badge-stage__meta > span:has(#badge-feature-position) {
+  display: none !important;
+}
+
+#projects .badge-stage__meta {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  width: min(100%, 520px) !important;
+  gap: 10px !important;
+}
+
+#projects .badge-stage__meta > span {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   TABLET FOUNDATION
+   --------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  main,
+  main > section,
+  #home,
+  #about,
+  #skills,
+  #projects,
+  #contact {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main > section {
+    scroll-margin-top: 82px;
+  }
+
+  /* Desktop focus-blur overlays obscure too much of a mobile screen. */
+  .skills-top-focus-blur,
+  .projects-top-focus-blur {
+    display: none !important;
+  }
+
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+
+  /* Keep controls touch-friendly and prevent accidental zoom on inputs. */
+  button,
+  a,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* ---------------- NAVIGATION ---------------- */
+
+  .navbar {
+    top: 10px !important;
+    width: calc(100% - 20px) !important;
+    min-height: 62px;
+    gap: 10px;
+    padding: 8px 10px 8px 12px;
+    border-radius: 19px;
+  }
+
+  .logo {
+    min-width: 0;
+    gap: 9px;
+  }
+
+  .logo-orb {
+    width: 40px;
+    flex: 0 0 40px;
+  }
+
+  .logo-copy {
+    min-width: 0;
+  }
+
+  .logo-copy strong {
+    overflow: hidden;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .logo-copy small {
+    font-size: 7.5px;
+    letter-spacing: .11em;
+  }
+
+  .navbar-actions {
+    flex: 0 0 auto;
+    gap: 7px;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+  }
+
+  .navbar nav {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    right: 0 !important;
+    left: auto !important;
+    width: min(360px, calc(100vw - 20px)) !important;
+    max-height: calc(100svh - 88px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    border-radius: 18px !important;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .26);
+  }
+
+  .navbar nav a {
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px !important;
+    font-size: 14px;
+    transform: none !important;
+  }
+
+  /* ---------------- SHARED SECTION RHYTHM ---------------- */
+
+  #home.hero,
+  #about.about-section,
+  #skills.skills-section,
+  #projects.projects-module,
+  #contact.contact-module {
+    min-height: 0;
+    overflow-x: clip;
+  }
+
+  #about .about-shell,
+  #skills .skills-shell,
+  #projects .projects-shell,
+  #contact .contact-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ---------------- HOME ---------------- */
+
+  #home.hero {
+    padding-top: 104px !important;
+    padding-right: clamp(18px, 4vw, 34px) !important;
+    padding-bottom: 70px !important;
+    padding-left: clamp(18px, 4vw, 34px) !important;
+  }
+
+  #home .hero-layout {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  #home .hero-content {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  #home .hero-title {
+    max-width: 100%;
+    margin: 18px 0 20px;
+    font-size: clamp(46px, 10.5vw, 78px) !important;
+    line-height: .9;
+    letter-spacing: -.058em;
+    overflow-wrap: anywhere;
+  }
+
+  #home .hero-title__accent {
+    width: auto !important;
+  }
+
+  #home .hero-description {
+    max-width: 650px;
+    font-size: clamp(15px, 2.3vw, 18px);
+    line-height: 1.65;
+  }
+
+  #home .hero-visual {
+    width: 100%;
+    min-height: clamp(390px, 58vw, 520px) !important;
+    margin-top: 0 !important;
+  }
+
+  #home .core-stage {
+    width: min(72vw, 460px) !important;
+  }
+
+  #home .hero-footer {
+    position: static !important;
+    margin-top: 24px !important;
+  }
+
+  /* ---------------- ABOUT ---------------- */
+
+  #about.about-section {
+    padding: 104px clamp(18px, 4vw, 34px) 80px !important;
+  }
+
+  #about .about-intro-grid,
+  #about .about-journey {
+    grid-template-columns: 1fr !important;
+    gap: 38px !important;
+  }
+
+  #about .about-intro {
+    margin-top: 0 !important;
+  }
+
+  #about .about-title {
+    max-width: 100%;
+    font-size: clamp(48px, 10vw, 74px) !important;
+    overflow-wrap: anywhere;
+  }
+
+  #about .about-introduction {
+    max-width: 760px;
+    font-size: clamp(19px, 3.2vw, 24px) !important;
+    line-height: 1.48 !important;
+  }
+
+  #about .about-quick-facts {
+    width: 100%;
+  }
+
+  #about .about-journey {
+    margin-top: clamp(64px, 8vw, 92px);
+  }
+
+  #about .about-stage-console {
+    position: relative !important;
+    top: auto !important;
+    width: 100%;
+    max-width: 720px;
+    grid-row: auto !important;
+  }
+
+  #about .about-principles-section {
+    margin-top: clamp(68px, 9vw, 100px) !important;
+  }
+
+  /* ---------------- SKILLS ---------------- */
+
+  #skills.skills-section {
+    padding: 104px clamp(18px, 4vw, 34px) 80px !important;
+  }
+
+  #skills .skills-hero {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  #skills .skills-title {
+    font-size: clamp(48px, 10vw, 76px) !important;
+    overflow-wrap: anywhere;
+  }
+
+  #skills .skills-summary {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  #skills .skills-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  #skills .skills-orbit-panel,
+  #skills .skills-detail-panel {
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  #skills .skills-detail-panel {
+    min-height: 0 !important;
+  }
+
+  #skills .skills-detail-scroll-body {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  #skills .skills-detail-scrollbar {
+    display: none !important;
+  }
+
+  #skills .skills-detail-header {
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 0 14px !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* ---------------- PROJECTS ---------------- */
+
+  #projects.projects-module {
+    padding-bottom: 78px;
+  }
+
+  #projects .projects-shell {
+    padding-right: clamp(18px, 4vw, 34px) !important;
+    padding-left: clamp(18px, 4vw, 34px) !important;
+  }
+
+  #projects .projects-intro,
+  #projects .credentials-intro {
+    padding-top: 104px;
+  }
+
+  #projects .projects-intro__layout,
+  #projects .credentials-intro__layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  #projects .projects-intro__summary,
+  #projects .credentials-intro__layout > div {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  #projects .project-index,
+  #projects .credential-vault,
+  #projects .badge-passport {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  #projects .project-index__filters,
+  #projects .certificate-filters,
+  #projects .badge-domain-list {
+    scrollbar-width: none;
+  }
+
+  #projects .project-index__filters::-webkit-scrollbar,
+  #projects .certificate-filters::-webkit-scrollbar,
+  #projects .badge-domain-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  #projects .credential-vault__layout,
+  #projects .badge-passport__layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Project popup uses a clear vertical reading order on tablet. */
+  #projects .project-dialog {
+    width: calc(100vw - 20px) !important;
+    height: calc(100svh - 20px) !important;
+    max-height: calc(100svh - 20px) !important;
+    overflow: hidden !important;
+  }
+
+  #projects .project-dialog__frame,
+  #projects .project-dialog__viewport,
+  #projects .project-dialog .project-showroom__main {
+    height: 100% !important;
+    min-height: 0 !important;
+  }
+
+  #projects .project-dialog .project-showroom__main {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: minmax(300px, 48svh) minmax(0, 1fr) !important;
+  }
+
+  #projects .project-dialog .project-visual-stage {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  #projects .project-dialog .project-detail-panel {
+    width: 100%;
+    height: 100% !important;
+    min-height: 0 !important;
+    overflow: hidden;
+  }
+
+  #projects .project-dialog .project-detail-panel__body {
+    display: flex !important;
+    height: 100%;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain;
+  }
+
+  /* ---------------- CONTACT ---------------- */
+
+  #contact.contact-module {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 104px clamp(18px, 4vw, 34px) 54px !important;
+    overflow: clip !important;
+  }
+
+  #contact .contact-heading,
+  #contact .contact-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  #contact .contact-heading {
+    gap: 18px !important;
+    padding-bottom: 28px;
+  }
+
+  #contact .contact-heading__content h2 {
+    font-size: clamp(50px, 10vw, 76px);
+    white-space: normal !important;
+  }
+
+  #contact .contact-layout {
+    gap: 18px;
+  }
+
+  #contact .contact-profile,
+  #contact .contact-form-panel {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    border-radius: 24px !important;
+  }
+
+  #contact .contact-footer {
+    position: static !important;
+    display: flex !important;
+    width: 100%;
+    min-height: 0 !important;
+    margin-top: 22px !important;
+    padding: 18px 0 0 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   MOBILE — 768px AND BELOW
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  /* ---------------- LOADER ---------------- */
+
+  .loader-ui {
+    width: min(100% - 28px, 430px);
+  }
+
+  .loader-core-shell {
+    width: min(54vw, 210px);
+  }
+
+  .loader-status {
+    width: 100%;
+  }
+
+  .loader-message {
+    font-size: clamp(14px, 4vw, 18px);
+    text-align: center;
+  }
+
+  .loader-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .loader-metrics span {
+    min-width: 0;
+    text-align: center;
+  }
+
+  /* ---------------- NAVIGATION ---------------- */
+
+  .navbar {
+    width: calc(100% - 16px) !important;
+    min-height: 58px;
+    padding: 7px 8px 7px 10px;
+    border-radius: 17px;
+  }
+
+  .logo-orb {
+    width: 38px;
+    flex-basis: 38px;
+  }
+
+  .logo-copy strong {
+    font-size: 11.5px;
+  }
+
+  .logo-copy small {
+    display: none;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .navbar nav {
+    width: calc(100vw - 16px) !important;
+    padding: 9px !important;
+  }
+
+  /* ---------------- HOME ---------------- */
+
+  #home.hero {
+    padding-top: 92px !important;
+    padding-right: 18px !important;
+    padding-bottom: 56px !important;
+    padding-left: 18px !important;
+  }
+
+  #home .hero-eyebrow {
+    gap: 7px;
+    font-size: 8px;
+    line-height: 1.55;
+    letter-spacing: .12em;
+  }
+
+  #home .eyebrow-code {
+    padding-left: 7px;
+  }
+
+  #home .hero-title {
+    margin: 17px 0 20px;
+    font-size: clamp(42px, 12.2vw, 66px) !important;
+    line-height: .92;
+  }
+
+  #home .role-console {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: .09em;
+  }
+
+  #home .hero-description {
+    margin-top: 17px;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  #home .hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  #home .primary-btn,
+  #home .secondary-btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 50px;
+    padding-inline: 15px;
+    font-size: 12px;
+  }
+
+  #home .hero-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    gap: 0;
+    margin-top: 22px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+  }
+
+  #home .hero-fact {
+    min-width: 0;
+    padding: 11px 8px;
+    border-left: 0;
+    border-right: 1px solid var(--glass-border);
+    text-align: center;
+  }
+
+  #home .hero-fact:last-child {
+    border-right: 0;
+  }
+
+  #home .hero-fact strong {
+    font-size: 13px;
+  }
+
+  #home .hero-fact span {
+    font-size: 6.5px;
+    line-height: 1.35;
+    letter-spacing: .07em;
+  }
+
+  #home .hero-visual {
+    min-height: 370px !important;
+  }
+
+  #home .core-stage {
+    width: min(88vw, 370px) !important;
+    transform: none !important;
+  }
+
+  #home .float-card {
+    transform: none !important;
+  }
+
+  #home .hero-footer,
+  #home .scroll-cue {
+    display: none !important;
+  }
+
+  /* ---------------- ABOUT ---------------- */
+
+  #about.about-section {
+    padding: 92px 18px 64px !important;
+  }
+
+  #about .about-label {
+    margin-bottom: 16px;
+  }
+
+  #about .about-title {
+    font-size: clamp(42px, 12vw, 62px) !important;
+    line-height: .96 !important;
+  }
+
+  #about .about-intro-grid {
+    margin-top: 28px !important;
+    gap: 28px !important;
+  }
+
+  #about .about-introduction {
+    font-size: clamp(18px, 5.5vw, 22px) !important;
+    line-height: 1.5 !important;
+  }
+
+  #about .about-quick-facts {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 9px;
+    margin-top: 20px;
+  }
+
+  #about .about-quick-fact {
+    min-height: 68px !important;
+    padding: 13px 14px;
+  }
+
+  /* Replace physics positioning with a stable mobile identity card. */
+  #about .about-lanyard-svg,
+  #about .about-lanyard-anchor,
+  #about .about-drag-hint {
+    display: none !important;
+  }
+
+  #about .about-hanging-zone {
+    display: grid !important;
+    place-items: center !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 8px 0 0 !important;
+    padding: 16px 0 4px !important;
+    overflow: visible !important;
+  }
+
+  #about .about-hanging-zone::before {
+    width: min(330px, 92%) !important;
+  }
+
+  #about .about-hanging-card-body,
+  #about .about-hanging-zone.is-present .about-hanging-card-body,
+  #about .about-hanging-zone.is-entering .about-hanging-card-body,
+  #about .about-hanging-zone.is-leaving .about-hanging-card-body {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: min(100%, 320px) !important;
+    margin: 0 auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    cursor: default !important;
+    touch-action: pan-y !important;
+  }
+
+  #about .about-card-clip {
+    display: none !important;
+  }
+
+  #about .about-profile-card {
+    width: 100% !important;
+    border-radius: 22px !important;
+  }
+
+  #about .about-journey {
+    gap: 38px !important;
+    margin-top: 62px;
+  }
+
+  #about .about-timeline {
+    margin-top: 28px;
+  }
+
+  #about .journey-node {
+    min-height: 0 !important;
+    padding-bottom: 38px;
+  }
+
+  #about .about-principles-header {
+    gap: 12px;
+  }
+
+  #about .about-principles-header h3,
+  #about .about-journey__heading h3 {
+    font-size: clamp(36px, 10vw, 52px) !important;
+  }
+
+  #about .about-principles {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+    margin-top: 26px !important;
+  }
+
+  #about .principle-card {
+    min-height: 0 !important;
+    padding: 24px 20px;
+  }
+
+  /* ---------------- SKILLS ---------------- */
+
+  #skills.skills-section {
+    padding: 92px 18px 64px !important;
+  }
+
+  #skills .skills-title {
+    font-size: clamp(42px, 12vw, 62px) !important;
+    line-height: .94;
+  }
+
+  #skills .skills-introduction {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  #skills .skills-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    border-radius: 18px;
+  }
+
+  #skills .skills-summary__item {
+    min-height: 92px;
+    grid-template-columns: 1fr !important;
+    padding: 12px 8px;
+    border-right: 1px solid var(--glass-border) !important;
+    border-bottom: 0 !important;
+  }
+
+  #skills .skills-summary__item:last-child {
+    border-right: 0 !important;
+  }
+
+  #skills .skills-summary__item span {
+    font-size: clamp(24px, 8vw, 34px);
+  }
+
+  #skills .skills-summary__item p {
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  #skills .skills-showcase {
+    margin-top: 26px !important;
+  }
+
+  #skills .skills-orbit-panel,
+  #skills .skills-detail-panel {
+    border-radius: 22px;
+  }
+
+  #skills .skills-orbit-panel__topbar {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    padding: 13px !important;
+  }
+
+  #skills .skills-orbit-panel__topbar > div:first-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #skills .skills-orbit-panel__topbar .skills-filter-list {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    overflow-x: auto;
+    padding: 0 0 2px;
+    scrollbar-width: none;
+  }
+
+  #skills .skills-orbit-panel__topbar .skills-filter-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  #skills .skills-orbit-panel__topbar .skills-filter-button {
+    flex: 0 0 auto;
+    min-height: 38px;
+    padding-inline: 13px;
+    font-size: 11px;
+  }
+
+  #skills .skills-motion-toggle {
+    display: none !important;
+  }
+
+  /* Mobile Skills becomes a readable card gallery instead of a crowded orbit. */
+  #skills .skills-orbit-stage {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    padding: 14px !important;
+    perspective: none !important;
+    touch-action: pan-y !important;
+    cursor: default !important;
+  }
+
+  #skills .skills-orbit-stage__halo,
+  #skills .skills-orbit-stage__track,
+  #skills .skills-orbit-core,
+  #skills .skills-orbit-stage__hint,
+  #skills .skills-orbit-controls {
+    display: none !important;
+  }
+
+  #skills .skills-orbit-layer {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px;
+    width: 100%;
+    transform: none !important;
+    transform-style: flat !important;
+    pointer-events: auto !important;
+  }
+
+  #skills .skill-orbit-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 165px !important;
+    padding: 14px !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    will-change: auto !important;
+  }
+
+  #skills .skill-orbit-card h3 {
+    font-size: clamp(19px, 5.4vw, 24px);
+  }
+
+  #skills .skill-orbit-card p {
+    font-size: 11.5px;
+  }
+
+  #skills .skills-detail-scroll-body {
+    padding: 18px !important;
+  }
+
+  #skills .skills-detail-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #skills .skills-detail-identity {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  #skills .skills-detail-symbol {
+    width: 52px;
+    height: 52px;
+  }
+
+  #skills .skills-detail-identity h3 {
+    font-size: clamp(30px, 9vw, 44px);
+    overflow-wrap: anywhere;
+  }
+
+  #skills .skills-detail-summary {
+    font-size: 15px;
+  }
+
+  #skills .skills-detail-tools {
+    grid-template-columns: 1fr !important;
+  }
+
+  #skills .skill-detail-tool {
+    min-height: 54px;
+  }
+
+  /* ---------------- PROJECTS INTRO + INDEX ---------------- */
+
+  #projects .projects-shell {
+    padding-right: 14px !important;
+    padding-left: 14px !important;
+  }
+
+  #projects .projects-intro,
+  #projects .credentials-intro {
+    padding-top: 92px !important;
+  }
+
+  #projects .projects-intro__code,
+  #projects .credentials-intro__code {
+    gap: 6px;
+  }
+
+  #projects .projects-title,
+  #projects .credentials-title {
+    font-size: clamp(42px, 12vw, 62px) !important;
+    line-height: .94;
+    overflow-wrap: anywhere;
+  }
+
+  #projects .projects-intro__summary > p,
+  #projects .credentials-intro__layout > div > p {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  #projects .projects-metrics,
+  #projects .credentials-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    border-radius: 18px;
+  }
+
+  #projects .projects-metrics article,
+  #projects .credentials-metrics article {
+    min-width: 0;
+    min-height: 92px;
+    display: grid !important;
+    justify-items: start !important;
+    align-content: center;
+    gap: 6px !important;
+    padding: 13px 10px;
+    border-right: 1px solid var(--glass-border) !important;
+    border-bottom: 0 !important;
+  }
+
+  #projects .projects-metrics article:last-child,
+  #projects .credentials-metrics article:last-child {
+    border-right: 0 !important;
+  }
+
+  #projects .projects-metrics strong,
+  #projects .credentials-metrics strong {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  #projects .projects-metrics span,
+  #projects .credentials-metrics span {
+    margin-top: 0 !important;
+    font-size: 9px;
+    line-height: 1.35;
+    text-align: left !important;
+  }
+
+  #projects .project-showroom {
+    margin-top: 42px !important;
+    border-radius: 22px !important;
+  }
+
+  #projects .project-index {
+    padding: 18px 14px !important;
+  }
+
+  #projects .project-index__heading {
+    gap: 8px;
+    margin-bottom: 12px !important;
+  }
+
+  #projects .project-index__heading span {
+    font-size: 9px !important;
+  }
+
+  #projects .project-index__heading strong {
+    font-size: 16px !important;
+  }
+
+  #projects .project-index__filters {
+    justify-content: flex-start !important;
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 7px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    border-radius: 14px;
+  }
+
+  #projects .project-index__filters::before,
+  #projects .project-index__filters::after {
+    display: none !important;
+  }
+
+  #projects .project-index__filters .project-filters {
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    width: max-content !important;
+    min-width: 100%;
+    overflow: visible !important;
+  }
+
+  #projects .project-filter {
+    flex: 0 0 auto;
+    min-height: 38px !important;
+    padding-inline: 14px !important;
+    font-size: 11px !important;
+  }
+
+  #projects.projects-popup-mode .project-card-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    overflow: visible !important;
+  }
+
+  #projects.projects-popup-mode .project-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 150px !important;
+    border-radius: 16px;
+  }
+
+  #projects.projects-popup-mode .project-card__content {
+    padding: 13px !important;
+  }
+
+  #projects.projects-popup-mode .project-card__title {
+    padding-top: 16px;
+    font-size: clamp(16px, 4.5vw, 20px) !important;
+  }
+
+  #projects.projects-popup-mode .project-card__subtitle {
+    max-width: calc(100% - 38px);
+    font-size: 10px !important;
+  }
+
+  #projects.projects-popup-mode .project-card__select {
+    width: 34px !important;
+    height: 34px;
+  }
+
+  /* ---------------- PROJECT POPUP ---------------- */
+
+  #projects .project-dialog {
+    width: calc(100vw - 10px) !important;
+    height: calc(100svh - 10px) !important;
+    max-height: calc(100svh - 10px) !important;
+    border-radius: 18px !important;
+  }
+
+  #projects .project-dialog__chrome {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    min-height: 50px;
+    padding: 7px 8px 7px 13px;
+  }
+
+  #projects .project-dialog__mode span {
+    font-size: 8px !important;
+  }
+
+  #projects .project-dialog__close {
+    width: 39px;
+    height: 39px;
+  }
+
+  #projects .project-dialog .project-showroom__main {
+    grid-template-rows: minmax(250px, 41svh) minmax(0, 1fr) !important;
+  }
+
+  #projects .project-dialog .project-screen-stack {
+    inset: 12px 0 18px !important;
+    padding-inline: 3.5% !important;
+  }
+
+  #projects .project-dialog .project-slider-slide {
+    flex-basis: 92% !important;
+    border-radius: 15px !important;
+  }
+
+  #projects .project-dialog .project-slider-slide__chrome {
+    min-height: 34px;
+    padding-inline: 11px;
+  }
+
+  #projects .project-dialog .project-visual-dots {
+    bottom: 7px !important;
+  }
+
+  #projects .project-dialog .project-detail-panel__body {
+    gap: 15px !important;
+    padding: 20px 17px 24px !important;
+  }
+
+  #projects .project-dialog .project-detail-heading p {
+    font-size: 11px !important;
+  }
+
+  #projects .project-dialog .project-detail-heading h3 {
+    font-size: clamp(36px, 11vw, 52px) !important;
+    line-height: .96 !important;
+  }
+
+  #projects .project-dialog .project-detail-heading strong {
+    font-size: clamp(16px, 4.5vw, 20px) !important;
+  }
+
+  #projects .project-dialog .project-detail-summary {
+    font-size: 15px !important;
+    line-height: 1.58 !important;
+  }
+
+  #projects .project-dialog .project-detail-block__heading span,
+  #projects .project-dialog .project-detail-outcome span {
+    font-size: 10px !important;
+  }
+
+  #projects .project-dialog .project-detail-features,
+  #projects .project-dialog .project-detail-tools {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  #projects .project-dialog .project-detail-feature,
+  #projects .project-dialog .project-tool {
+    width: 100%;
+    min-height: 48px !important;
+    font-size: 13px !important;
+  }
+
+  #projects .project-dialog .project-tool__icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  #projects .project-dialog .project-detail-outcome {
+    padding: 16px !important;
+  }
+
+  #projects .project-dialog .project-detail-outcome p {
+    font-size: 14px !important;
+  }
+
+  /* ---------------- CERTIFICATE VAULT ---------------- */
+
+  #projects .credentials-section {
+    margin-top: 72px;
+  }
+
+  #projects .credential-vault,
+  #projects .badge-passport {
+    border-radius: 22px !important;
+  }
+
+  #projects .credential-vault__header,
+  #projects .badge-passport__header {
+    gap: 14px;
+    padding: 18px 16px !important;
+  }
+
+  #projects .credential-vault__header h3,
+  #projects .badge-passport__header h3 {
+    font-size: clamp(25px, 7.4vw, 34px) !important;
+    line-height: 1.05;
+  }
+
+  #projects .certificate-filters {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  #projects .certificate-filter {
+    flex: 0 0 auto;
+    min-height: 38px !important;
+    padding-inline: 14px !important;
+    font-size: 11px !important;
+  }
+
+  #projects .certificate-feature {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  #projects .certificate-feature__visual {
+    min-height: 290px !important;
+    padding: 22px !important;
+  }
+
+  #projects .certificate-feature__visual img {
+    max-width: 100%;
+    max-height: 250px !important;
+  }
+
+  #projects .certificate-feature__stamp {
+    right: 14px;
+    bottom: 12px;
+    font-size: 7px;
+  }
+
+  #projects .certificate-feature__info {
+    min-width: 0;
+    padding: 20px 17px 22px !important;
+    border-top: 1px solid var(--glass-border) !important;
+    border-left: 0 !important;
+  }
+
+  #projects .certificate-feature__info h4 {
+    font-size: clamp(25px, 7vw, 34px) !important;
+    overflow-wrap: anywhere;
+  }
+
+  #projects .certificate-feature__meta {
+    align-items: center;
+    gap: 12px;
+  }
+
+  #projects .certificate-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    max-height: none !important;
+    overflow: visible !important;
+    padding: 14px !important;
+  }
+
+  #projects .certificate-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 104px;
+    flex: none !important;
+  }
+
+  #projects .certificate-view-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #projects .certificate-dialog {
+    width: calc(100vw - 10px) !important;
+    max-height: calc(100svh - 10px) !important;
+    border-radius: 18px !important;
+  }
+
+  #projects .certificate-dialog__content {
+    grid-template-columns: 1fr !important;
+  }
+
+  #projects .certificate-dialog__visual {
+    min-height: 0 !important;
+    padding: 54px 14px 18px !important;
+  }
+
+  #projects .certificate-dialog__visual img {
+    max-width: 100% !important;
+    max-height: 58svh !important;
+  }
+
+  #projects .certificate-dialog__info {
+    padding: 18px !important;
+  }
+
+  /* ---------------- DIGITAL BADGE GALLERY ---------------- */
+
+  #projects .badge-passport.badge-passport--gallery {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  #projects .badge-passport--gallery .badge-passport__layout {
+    display: grid !important;
+    grid-template-rows: auto auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  #projects .badge-passport--gallery .badge-feature.badge-feature--gallery {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  #projects .badge-stage {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    padding: 20px 16px 16px !important;
+  }
+
+  #projects .badge-stage__visual {
+    grid-row: 1 !important;
+    width: 100% !important;
+    min-height: 180px;
+  }
+
+  #projects .badge-stage__image-frame {
+    width: 170px !important;
+    height: 170px !important;
+    border-radius: 24px !important;
+  }
+
+  #projects .badge-stage__copy {
+    grid-row: 2 !important;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  #projects .badge-stage__copy h4 {
+    max-width: 100% !important;
+    margin: 8px auto 0 !important;
+    font-size: clamp(29px, 9vw, 42px) !important;
+    line-height: 1 !important;
+    overflow-wrap: anywhere;
+  }
+
+  #projects .badge-stage__copy > p {
+    max-width: 100% !important;
+    margin: 10px auto 0 !important;
+    font-size: 14px !important;
+  }
+
+  #projects .badge-stage__meta {
+    width: 100% !important;
+    margin-top: 15px !important;
+  }
+
+  #projects .badge-stage__meta > span {
+    min-height: 70px;
+    padding: 10px !important;
+    text-align: left;
+  }
+
+  #projects .badge-stage__ghost {
+    display: none !important;
+  }
+
+  #projects .badge-domain-list.badge-domain-list--gallery {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 14px !important;
+  }
+
+  #projects .badge-domain-filter.badge-domain-filter--gallery {
+    flex: 0 0 auto;
+    min-height: 38px;
+  }
+
+  #projects .badge-grid {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  #projects .badge-gallery-shell {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  #projects .badge-gallery-shell__heading {
+    padding: 13px 16px !important;
+  }
+
+  #projects .badge-gallery-viewport {
+    min-height: 218px;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  #projects .badge-gallery-track {
+    width: max-content;
+    min-width: 100%;
+    padding: 16px 22px 20px !important;
+  }
+
+  #projects .badge-gallery-card {
+    width: 138px !important;
+    height: 178px !important;
+  }
+
+  /* ---------------- CONTACT ---------------- */
+
+  #contact.contact-module {
+    padding: 92px 16px 42px !important;
+  }
+
+  #contact .contact-heading {
+    padding-bottom: 24px;
+  }
+
+  #contact .contact-heading__content h2 {
+    font-size: clamp(45px, 13vw, 64px) !important;
+    line-height: .96;
+  }
+
+  #contact .contact-heading__content p {
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  #contact .contact-profile,
+  #contact .contact-form-panel {
+    padding: 20px 16px !important;
+    border-radius: 21px !important;
+  }
+
+  #contact .contact-profile__identity {
+    gap: 12px;
+  }
+
+  #contact .contact-profile__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 17px;
+  }
+
+  #contact .contact-profile__identity h3,
+  #contact .contact-form-panel__top h3 {
+    font-size: clamp(27px, 8vw, 36px) !important;
+  }
+
+  #contact .contact-profile__summary {
+    margin-top: 18px;
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  #contact .contact-profile__details,
+  #contact .contact-links,
+  #contact .contact-form__row {
+    grid-template-columns: 1fr !important;
+  }
+
+  #contact .contact-detail,
+  #contact .contact-link {
+    min-width: 0;
+  }
+
+  #contact .contact-link {
+    min-height: 62px;
+  }
+
+  #contact .contact-email-copy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  #contact .contact-email-copy strong {
+    overflow-wrap: anywhere;
+  }
+
+  #contact .contact-form {
+    gap: 12px;
+  }
+
+  #contact .contact-field {
+    padding: 11px 12px;
+  }
+
+  #contact .contact-field textarea {
+    min-height: 145px;
+    height: 145px;
+  }
+
+  #contact .contact-form__footer {
+    display: block !important;
+  }
+
+  #contact .contact-submit {
+    min-height: 52px;
+  }
+
+  #contact .contact-footer {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 14px;
+  }
+
+  #contact .contact-footer__meta {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+/* ---------------------------------------------------------
+   SMALL MOBILE — 480px AND BELOW
+   --------------------------------------------------------- */
+
+@media (max-width: 480px) {
+  .navbar {
+    gap: 6px;
+  }
+
+  .logo-copy strong {
+    max-width: 132px;
+    font-size: 10.5px;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+
+  /* Home */
+  #home .hero-title {
+    font-size: clamp(39px, 12.5vw, 56px) !important;
+  }
+
+  #home .hero-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  #home .hero-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #home .hero-fact {
+    border-right: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  #home .hero-fact:nth-child(2n) {
+    border-right: 0;
+  }
+
+  #home .hero-fact:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  #home .hero-visual {
+    min-height: 320px !important;
+  }
+
+  #home .core-stage {
+    width: min(94vw, 330px) !important;
+  }
+
+  #home .float-card,
+  #home .orbit-labels {
+    display: none !important;
+  }
+
+  /* About */
+  #about .about-title {
+    font-size: clamp(39px, 12vw, 54px) !important;
+  }
+
+  #about .about-hanging-card-body {
+    width: min(100%, 292px) !important;
+  }
+
+  #about .about-profile-card__data {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #about .about-profile-card__wide {
+    grid-column: 1 / -1;
+  }
+
+  /* Skills */
+  #skills .skills-title {
+    font-size: clamp(39px, 12vw, 54px) !important;
+  }
+
+  #skills .skills-summary {
+    grid-template-columns: 1fr !important;
+  }
+
+  #skills .skills-summary__item {
+    min-height: 70px;
+    grid-template-columns: auto 1fr !important;
+    justify-content: start;
+    gap: 14px;
+    padding: 12px 16px;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    text-align: left;
+  }
+
+  #skills .skills-summary__item:last-child {
+    border-bottom: 0 !important;
+  }
+
+  #skills .skills-summary__item span {
+    font-size: 28px;
+  }
+
+  #skills .skills-orbit-layer {
+    grid-template-columns: 1fr !important;
+  }
+
+  #skills .skill-orbit-card {
+    min-height: 150px !important;
+  }
+
+  #skills .skills-detail-header__status {
+    display: none;
+  }
+
+  #skills .skills-detail-identity h3 {
+    font-size: clamp(28px, 10vw, 40px);
+  }
+
+  /* Projects */
+  #projects .projects-shell {
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+
+  #projects .projects-title,
+  #projects .credentials-title {
+    font-size: clamp(39px, 12vw, 54px) !important;
+  }
+
+  #projects .projects-metrics,
+  #projects .credentials-metrics {
+    grid-template-columns: 1fr !important;
+  }
+
+  #projects .projects-metrics article,
+  #projects .credentials-metrics article {
+    min-height: 66px;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+  }
+
+  #projects .projects-metrics article:last-child,
+  #projects .credentials-metrics article:last-child {
+    border-bottom: 0 !important;
+  }
+
+  #projects.projects-popup-mode .project-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  #projects.projects-popup-mode .project-card {
+    min-height: 170px !important;
+  }
+
+  #projects .project-dialog .project-showroom__main {
+    grid-template-rows: minmax(220px, 36svh) minmax(0, 1fr) !important;
+  }
+
+  #projects .project-dialog .project-detail-heading h3 {
+    font-size: clamp(34px, 12vw, 46px) !important;
+  }
+
+  #projects .certificate-feature__visual {
+    min-height: 245px !important;
+  }
+
+  #projects .certificate-feature__visual img {
+    max-height: 210px !important;
+  }
+
+  #projects .certificate-feature__meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #projects .badge-stage__image-frame {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  #projects .badge-stage__meta {
+    grid-template-columns: 1fr !important;
+  }
+
+  #projects .badge-stage__meta > span {
+    min-height: 62px;
+  }
+
+  #projects .badge-gallery-card {
+    width: 126px !important;
+    height: 164px !important;
+  }
+
+  /* Contact */
+  #contact .contact-profile__top,
+  #contact .contact-form-panel__top {
+    gap: 12px;
+  }
+
+  #contact .contact-profile__identity h3,
+  #contact .contact-form-panel__top h3 {
+    font-size: 26px !important;
+  }
+
+  #contact .contact-email-copy {
+    grid-template-columns: 1fr;
+  }
+
+  #contact .contact-copy-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #contact .contact-footer__meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* ---------------------------------------------------------
+   SHORT LANDSCAPE PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 900px) and (max-height: 560px) and (orientation: landscape) {
+  .navbar {
+    top: 6px !important;
+  }
+
+  .navbar nav {
+    max-height: calc(100svh - 74px);
+  }
+
+  #home.hero,
+  #about.about-section,
+  #skills.skills-section,
+  #projects .projects-intro,
+  #projects .credentials-intro,
+  #contact.contact-module {
+    padding-top: 78px !important;
+  }
+
+  #home .hero-visual {
+    min-height: 300px !important;
+  }
+
+  #projects .project-dialog .project-showroom__main {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, .9fr) !important;
+    grid-template-rows: 1fr !important;
+  }
+
+  #projects .project-dialog .project-visual-stage {
+    border-right: 1px solid var(--glass-border) !important;
+    border-bottom: 0 !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .magnetic,
+  .interactive,
+  #projects .project-card,
+  #projects .project-filter,
+  #projects .certificate-filter,
+  #projects .certificate-card,
+  #projects .certificate-view-button,
+  #projects .badge-gallery-card,
+  #skills .skills-filter-button,
+  #skills .skills-motion-toggle,
+  #skills .skills-orbit-control,
+  #contact .contact-link,
+  #contact .contact-submit {
+    translate: none !important;
+  }
+
+  #projects .project-filter:hover,
+  #projects .certificate-filter:hover,
+  #projects .certificate-card:hover,
+  #projects .certificate-view-button:hover,
+  #skills .skills-filter-button:hover,
+  #skills .skills-motion-toggle:hover,
+  #skills .skills-orbit-control:hover,
+  #contact .contact-link:hover,
+  #contact .contact-submit:hover {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-lanyard-svg,
+  .about-lanyard-anchor {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  #about .about-card-clip,
+  #about .about-drag-hint {
+    display: none !important;
+  }
+  #about .about-hanging-card-body {
+    position: relative !important;
+    inset: auto !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    filter: none !important;
+    cursor: default !important;
+    touch-action: pan-y !important;
+  }
+
+  #about .about-hanging-zone {
+    display: grid !important;
+    place-items: center !important;
+    min-height: 0 !important;
+    padding-top: 12px !important;
+    overflow: visible !important;
+  }
+
+  /* ---------------------------------------------------------
+     REMOVE GAP BETWEEN CREDENTIALS/BADGES AND CONTACT
+     --------------------------------------------------------- */
+
+  #projects .credentials-section {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-bottom: 0 !important;
+    padding-bottom: 18px !important;
+  }
+
+  #projects .badge-passport,
+  #projects .badge-passport--gallery,
+  #projects .badge-grid,
+  #projects .badge-gallery-shell {
+    margin-bottom: 0 !important;
+  }
+
+  #contact.contact-module {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-top: 0 !important;
+    padding-top: 24px !important;
+    padding-bottom: 18px !important;
+  }
+
+  #contact .contact-container {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #contact .contact-footer {
+    position: static !important;
+    inset: auto !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    min-height: 0 !important;
+
+    gap: 12px 16px !important;
+    margin: 18px 0 0 !important;
+    padding: 16px 0 8px !important;
+
+    text-align: left !important;
+    transform: none !important;
+  }
+
+  #contact .contact-footer > :first-child {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Copyright */
+  #contact .contact-footer > :nth-child(2) {
+    grid-column: 1 !important;
+    margin: 0 !important;
+    justify-self: start !important;
+  }
+
+  /* Back to top */
+  #contact .contact-footer > :last-child {
+    grid-column: 2 !important;
+    margin: 0 !important;
+    justify-self: end !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #skills.skills-section {
+    padding-bottom: 28px !important;
+  }
+
+  #projects.projects-module {
+    padding-top: 20px !important;
+    padding-bottom: 18px !important;
+  }
+
+  #contact.contact-module {
+    padding-top: 20px !important;
+  }
+
+  #contact .contact-footer {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  #contact .contact-footer > :first-child,
+  #contact .contact-footer > :nth-child(2),
+  #contact .contact-footer > :last-child {
+    grid-column: 1 !important;
+    justify-self: start !important;
+  }
+}
+/* =========================================================
+   MOBILE — FINAL SECTION SPACING + CONTACT FOOTER
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------------- SKILLS → PROJECTS GAP ---------------- */
+
+  #skills.skills-section {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-bottom: 0 !important;
+    padding-bottom: 18px !important;
+  }
+
+  #skills .skills-shell,
+  #skills .skills-showcase {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #projects.projects-module {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+    /* Keeps navbar navigation accurate */
+    scroll-margin-top: 76px !important;
+  }
+
+  /* Remove the original 110px mobile padding */
+  #projects .projects-shell {
+    margin-top: 0 !important;
+
+    padding-top: 24px !important;
+    padding-right: 14px !important;
+    padding-bottom: 24px !important;
+    padding-left: 14px !important;
+  }
+
+  /* Remove the additional 92px padding */
+  #projects .projects-intro {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Do not add another large gap before the project index */
+  #projects.projects-popup-mode .project-showroom {
+    margin-top: 30px !important;
+  }
+
+
+  /* ---------------- CREDENTIALS → CONTACT GAP ---------------- */
+
+  #projects .credentials-section {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-bottom: 0 !important;
+    padding-bottom: 18px !important;
+  }
+
+  #contact.contact-module {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-top: 0 !important;
+    padding-top: 22px !important;
+    padding-bottom: 14px !important;
+  }
+
+
+  /* ---------------- CLEAN CONTACT FOOTER ---------------- */
+
+  #contact .contact-footer {
+    position: static !important;
+    inset: auto !important;
+
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+
+    width: 100% !important;
+    min-height: 0 !important;
+
+    gap: 13px !important;
+    margin: 16px 0 0 !important;
+    padding: 17px 2px 4px !important;
+
+    border-top:
+      1px solid
+      rgba(133, 164, 199, 0.16) !important;
+
+    transform: none !important;
+  }
+
+  /* Thank-you message */
+  #contact .contact-footer__message {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr) !important;
+    align-items: start !important;
+
+    width: 100% !important;
+    gap: 10px !important;
+    margin: 0 !important;
+  }
+
+  #contact .contact-footer__message .contact-status-dot {
+    margin-top: 5px !important;
+  }
+
+  #contact .contact-footer__message p {
+    width: 100% !important;
+    margin: 0 !important;
+
+    font-size: 12.5px !important;
+    line-height: 1.48 !important;
+  }
+
+  #contact .contact-footer__message strong {
+    display: block !important;
+    margin-top: 2px !important;
+  }
+
+  #contact .contact-footer__meta {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    width: 100% !important;
+    gap: 12px !important;
+
+    margin: 0 !important;
+    padding-top: 12px !important;
+
+    border-top:
+      1px solid
+      rgba(133, 164, 199, 0.1) !important;
+
+    font-size: 8.5px !important;
+  }
+
+  #contact .contact-footer__meta > span,
+  #contact .contact-footer__meta a {
+    white-space: nowrap !important;
+  }
+
+  #contact .contact-footer__meta a {
+    margin-left: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #about.about-section {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-bottom: 0 !important;
+    padding-bottom: 18px !important;
+  }
+
+  #about .about-shell,
+  #about .about-intro-grid {
+    min-height: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #skills.skills-section {
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+  }
+
+  #projects .project-showroom,
+  #projects .project-index {
+    margin-bottom: 0 !important;
+  }
+
+  #projects .credentials-section {
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-top: 24px !important;
+    padding-top: 0 !important;
+  }
+
+  #projects .credentials-section::before {
+    display: none !important;
+  }
+
+  #projects .credentials-intro {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  #about.about-section {
+    padding-bottom: 12px !important;
+  }
+
+  #skills.skills-section {
+    padding-top: 14px !important;
+  }
+
+  #projects .credentials-section {
+    margin-top: 18px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE BADGES — RESTORE SELECTED BADGE INFORMATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  #projects .badge-passport--gallery .badge-passport__layout {
+    display: block !important;
+    grid-template-rows: none !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    overflow: visible !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-feature.badge-feature--gallery {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    overflow: visible !important;
+  }
+
+  /* Override the desktop two-column rule */
+  #projects
+    .badge-passport--gallery
+    .badge-feature--gallery
+    .badge-stage {
+    display: grid !important;
+
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    gap: 18px !important;
+    padding: 26px 18px 24px !important;
+
+    overflow: visible !important;
+  }
+
+  /* Badge image appears first */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__visual {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    justify-self: center !important;
+
+    width: 150px !important;
+    height: 150px !important;
+    aspect-ratio: 1 !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__image-frame {
+    width: 128px !important;
+    height: 128px !important;
+    border-radius: 24px !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__orbit {
+    width: 170px !important;
+    height: 170px !important;
+  }
+
+  /* Badge information appears below the image */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy {
+    display: block !important;
+
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 0 !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+
+    text-align: center !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy h4 {
+    display: block !important;
+
+    max-width: 100% !important;
+    margin: 0 auto !important;
+
+    font-size: clamp(23px, 7vw, 30px) !important;
+    line-height: 1.05 !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy > p {
+    display: block !important;
+
+    max-width: 34ch !important;
+    margin: 9px auto 0 !important;
+
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Domain and Issuer */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    width: 100% !important;
+    max-width: 350px !important;
+
+    gap: 9px !important;
+    margin: 17px auto 0 !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta > span {
+    display: grid !important;
+
+    min-width: 0 !important;
+    min-height: 58px !important;
+
+    padding: 10px 11px !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta strong {
+    font-size: 12px !important;
+
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  #projects .badge-passport.badge-passport--gallery {
+    scroll-margin-top: 92px !important;
+  }
+}
+
+/* Mobile badges — centre title, description and detail cards */
+@media (max-width: 768px) {
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy {
+    width: 100% !important;
+    padding-inline: 16px !important;
+    text-align: center !important;
+  }
+
+  /* Badge title */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy h4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  /* Issuer description */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy > p {
+    width: 100% !important;
+    max-width: 34ch !important;
+    margin: 9px auto 0 !important;
+    text-align: center !important;
+  }
+
+  /* Centre Domain and Issuer cards */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    width: min(100%, 360px) !important;
+    margin: 18px auto 0 !important;
+
+    justify-content: center !important;
+    align-items: stretch !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta > span {
+    width: 100% !important;
+    text-align: center !important;
+    justify-items: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-inline: auto !important;
+    padding-inline: 0 !important;
+
+    text-align: center !important;
+  }
+
+  /* Keep badge title and issuer centred */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy h4,
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy > p {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta {
+    box-sizing: border-box !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    width: calc(100% - 32px) !important;
+    max-width: 370px !important;
+
+    gap: 10px !important;
+    margin: 18px auto 0 !important;
+    padding: 0 !important;
+
+    justify-content: center !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta > span {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    text-align: center !important;
+    justify-items: center !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__orbit {
+    display: none !important;
+  }
+}
+
+/* =========================================================
+   MOBILE BADGES — TRUE CENTRE ALIGNMENT
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Stop the badge stage from becoming wider than its container */
+  #projects
+    .badge-passport--gallery
+    .badge-feature--gallery
+    .badge-stage {
+    box-sizing: border-box !important;
+
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+
+    overflow: hidden !important;
+  }
+
+  /* Remove the old desktop left offset */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy {
+    box-sizing: border-box !important;
+
+    grid-column: 1 / -1 !important;
+    justify-self: stretch !important;
+
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    left: auto !important;
+    right: auto !important;
+
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  /* Centre title and issuer description */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy h4,
+  #projects
+    .badge-passport--gallery
+    .badge-stage__copy > p {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+
+    text-align: center !important;
+  }
+
+  /* Centre both cards as one complete group */
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta {
+    box-sizing: border-box !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    justify-self: center !important;
+    place-self: center !important;
+
+    width: min(100%, 360px) !important;
+    max-width: 360px !important;
+
+    gap: 10px !important;
+    margin: 18px auto 0 !important;
+    padding: 0 !important;
+
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta > span {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    justify-items: center !important;
+    align-content: center !important;
+    text-align: center !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta strong {
+    width: 100% !important;
+
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    text-align: center !important;
+  }
+}
+
+/* =========================================================
+   MOBILE BADGES — KEEP DETAIL CARDS ABOVE SLIDER
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Allow the selected-badge area to grow with long titles */
+  #projects
+    .badge-passport--gallery
+    .badge-passport__layout {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    grid-template-rows: none !important;
+    overflow: visible !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-feature.badge-feature--gallery {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    padding-bottom: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Create safe space underneath Domain and Issuer */
+  #projects
+    .badge-passport--gallery
+    .badge-feature--gallery
+    .badge-stage {
+    box-sizing: border-box !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding-bottom: 26px !important;
+    overflow: visible !important;
+  }
+
+  #projects
+    .badge-passport--gallery
+    .badge-stage__meta {
+    position: relative !important;
+    z-index: 2 !important;
+
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+
+    transform: none !important;
+  }
+
+  /* Slider must remain underneath the selected badge content */
+  #projects
+    .badge-passport--gallery
+    .badge-gallery-shell {
+    position: relative !important;
+    z-index: 1 !important;
+
+    clear: both !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-top: 0 !important;
+  }
+}
+/* =========================================================
+   MOBILE BADGES — FINAL NATURAL HEIGHT LAYOUT
+   Prevents image, title and cards from being clipped
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Cancel the old fixed 275px badge layout */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-passport__layout {
+    display: flex !important;
+    flex-direction: column !important;
+
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    overflow: visible !important;
+  }
+
+  /* Selected badge container grows according to its content */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-feature.badge-feature--gallery {
+    position: relative !important;
+
+    display: block !important;
+    flex: 0 0 auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Use normal vertical flow */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-feature--gallery
+    .badge-stage {
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    gap: 16px !important;
+    margin: 0 !important;
+    padding: 26px 16px 28px !important;
+
+    overflow: visible !important;
+  }
+
+  /* Selected badge image */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__visual {
+    position: relative !important;
+    inset: auto !important;
+
+    order: 1 !important;
+    flex: 0 0 150px !important;
+
+    width: 150px !important;
+    height: 150px !important;
+
+    margin: 0 auto !important;
+
+    transform: none !important;
+    animation: none !important;
+  }
+
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__image-frame {
+    width: 132px !important;
+    height: 132px !important;
+
+    margin: auto !important;
+
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Remove circles behind the featured badge */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__orbit,
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__ghost {
+    display: none !important;
+  }
+
+  /* Title, description and cards */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__copy {
+    position: relative !important;
+    inset: auto !important;
+
+    order: 2 !important;
+
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+
+    text-align: center !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Long badge titles */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__copy h4 {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 18ch !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    font-size: clamp(22px, 6.8vw, 29px) !important;
+    line-height: 1.1 !important;
+
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    overflow: visible !important;
+
+    text-align: center !important;
+    text-wrap: balance !important;
+
+    -webkit-line-clamp: unset !important;
+  }
+
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__copy > p {
+    width: 100% !important;
+    max-width: 34ch !important;
+
+    margin: 10px auto 0 !important;
+
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  /* Domain and Issuer remain fully above the carousel */
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__meta {
+    box-sizing: border-box !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    width: min(100%, 360px) !important;
+    max-width: 360px !important;
+
+    gap: 10px !important;
+    margin: 18px auto 0 !important;
+    padding: 0 !important;
+
+    position: static !important;
+    transform: none !important;
+  }
+
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__meta > span {
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 72px !important;
+
+    margin: 0 !important;
+    padding: 11px 8px !important;
+
+    align-content: center !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-stage__meta strong {
+    width: 100% !important;
+
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    text-align: center !important;
+  }
+
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-gallery-shell {
+    position: relative !important;
+    inset: auto !important;
+
+    flex: 0 0 auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding-top: 14px !important;
+
+    clear: both !important;
+    transform: none !important;
+  }
+
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-feature--gallery.is-changing
+    .badge-stage__image-frame,
+  #projects
+    .badge-passport.badge-passport--gallery
+    .badge-feature--gallery.is-changing
+    .badge-stage__copy {
+    transform: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}

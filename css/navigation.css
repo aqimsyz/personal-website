@@ -1,0 +1,280 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.navbar {
+  opacity: 0;
+  transform: translate(-50%, -24px) scale(.97);
+  transition:
+    opacity 900ms cubic-bezier(.16,1,.3,1),
+    transform 900ms cubic-bezier(.16,1,.3,1),
+    background 450ms ease,
+    border-color 450ms ease;
+}
+
+body.intro-complete .navbar {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.logo-orb {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-orb i {
+  position: absolute;
+  inset: -45%;
+  background: linear-gradient(110deg, transparent 37%, rgba(255,255,255,.72) 50%, transparent 63%);
+  transform: translateX(-100%) rotate(12deg);
+  animation: logo-shimmer 5.5s ease-in-out infinite 1.8s;
+}
+
+.logo-orb span {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar nav {
+  position: relative;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.navbar nav a {
+  position: relative;
+  z-index: 2;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+.navbar nav a.is-active {
+  color: var(--text-primary);
+}
+
+.nav-indicator {
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  left: 6px;
+  width: 60px;
+  height: calc(100% - 12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  background: rgba(255,255,255,.075);
+  box-shadow: inset 0 1px rgba(255,255,255,.08);
+  transition:
+    transform 480ms cubic-bezier(.16,1,.3,1),
+    width 480ms cubic-bezier(.16,1,.3,1);
+}
+
+.theme-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle__sun,
+.theme-toggle__moon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transition: transform 500ms cubic-bezier(.16,1,.3,1), opacity 350ms ease;
+}
+
+html[data-theme="dark"] .theme-toggle__sun {
+  transform: translateY(100%) rotate(45deg);
+  opacity: 0;
+}
+
+html[data-theme="dark"] .theme-toggle__moon {
+  transform: translateY(0) rotate(0);
+  opacity: 1;
+}
+
+html[data-theme="light"] .theme-toggle__sun {
+  transform: translateY(0) rotate(0);
+  opacity: 1;
+}
+
+html[data-theme="light"] .theme-toggle__moon {
+  transform: translateY(-100%) rotate(-45deg);
+  opacity: 0;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-content: center;
+  justify-items: center;
+  gap: 6px;
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  background: rgba(255,255,255,.045);
+}
+
+.menu-toggle span:not(.sr-only) {
+  display: block;
+  width: 17px;
+  height: 1px;
+  background: var(--text-primary);
+  transition: transform 350ms ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+.theme-transition {
+  position: fixed;
+  z-index: 99998;
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  background: var(--bg-primary);
+}
+
+.theme-transition.is-active {
+  animation: theme-bloom 760ms cubic-bezier(.2,.85,.35,1) forwards;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: grid;
+  }
+
+  .navbar nav {
+    position: fixed;
+    top: 78px;
+    right: 0;
+    width: min(330px, calc(100vw - 36px));
+    display: grid;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px;
+    border: 1px solid var(--glass-border);
+    border-radius: 22px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(30px) saturate(160%);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-12px) scale(.96);
+    transform-origin: top right;
+    transition:
+      opacity 350ms ease,
+      visibility 350ms ease,
+      transform 350ms cubic-bezier(.16,1,.3,1);
+  }
+
+  .navbar nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .navbar nav a {
+    padding: 14px 16px;
+  }
+
+  .nav-indicator {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .logo-copy strong {
+    font-size: 12px;
+  }
+
+  .navbar-actions {
+    gap: 7px;
+  }
+}
+
+@keyframes logo-shimmer {
+  0%, 70%, 100% { transform: translateX(-100%) rotate(12deg); }
+  84% { transform: translateX(100%) rotate(12deg); }
+}
+
+@keyframes theme-bloom {
+  0% {
+    opacity: .72;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  99% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(130);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(130);
+  }
+}
+
+
+/* MODULE 03.1 — Light navigation contrast */
+html[data-theme="light"] .nav-indicator {
+  border-color: rgba(12,24,48,.12);
+  background: rgba(12,24,48,.055);
+  box-shadow: inset 0 1px rgba(255,255,255,.9);
+}
+
+html[data-theme="light"] .navbar nav a {
+  color: #526079;
+}
+
+html[data-theme="light"] .navbar nav a:hover,
+html[data-theme="light"] .navbar nav a.is-active {
+  color: #0b1220;
+}
+
+html[data-theme="light"] .menu-toggle {
+  background: rgba(12,24,48,.045);
+}
+
+@media (max-width: 900px) {
+  html[data-theme="light"] .navbar nav {
+    border-color: rgba(12,24,48,.14);
+    background: rgba(255,255,255,.9);
+    box-shadow: 0 20px 55px rgba(24,42,76,.15);
+  }
+}
+
+.logo-orb {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 1px;
+
+  background: transparent;
+}
+
+.logo-orb > img {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit:contain;
+  object-position: center;
+
+  border-radius: 70%;
+}
+
+.logo-orb > i {
+  z-index: 3;
+}

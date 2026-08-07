@@ -1,0 +1,835 @@
+html[data-theme="light"] {
+  --light-polish-panel: #e4edf5;
+  --light-polish-panel-deep: #d8e4ee;
+  --light-polish-panel-soft: #edf3f8;
+  --light-polish-panel-muted: #cfdeea;
+  --light-polish-text: #102138;
+  --light-polish-muted: #38536c;
+  --light-polish-faint: #526b82;
+  --light-polish-border: rgba(22, 51, 80, 0.26);
+  --light-polish-shadow: rgba(29, 51, 76, 0.17);
+}
+
+html[data-theme="light"] #projects .project-showroom {
+  border-color: var(--light-polish-border) !important;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(0, 127, 137, 0.055), transparent 28%),
+    linear-gradient(145deg, #e7eef5, #d8e4ee) !important;
+  box-shadow:
+    0 26px 60px var(--light-polish-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+html[data-theme="light"] #projects .project-index {
+  border-top-color: rgba(22, 51, 80, 0.2) !important;
+  background:
+    linear-gradient(145deg, rgba(220, 231, 240, 0.96), rgba(207, 222, 234, 0.92)) !important;
+}
+
+html[data-theme="light"] #projects .project-showroom__toolbar,
+html[data-theme="light"] #projects .project-index__filters {
+  border-color: rgba(22, 51, 80, 0.2) !important;
+  background: rgba(214, 227, 238, 0.9) !important;
+}
+
+html[data-theme="light"] #projects .project-filter {
+  color: #304b64 !important;
+  border-color: rgba(22, 51, 80, 0.24) !important;
+  background: #e2ebf3 !important;
+}
+
+html[data-theme="light"] #projects .project-filter:hover {
+  color: var(--light-polish-text) !important;
+  background: #edf3f8 !important;
+}
+
+html[data-theme="light"] #projects .project-filter.is-active {
+  color: var(--light-polish-text) !important;
+  background:
+    linear-gradient(135deg, rgba(101, 73, 217, 0.15), rgba(0, 127, 137, 0.16)) !important;
+}
+
+html[data-theme="light"] #projects .project-index__heading p,
+html[data-theme="light"] #projects .project-index__heading kbd {
+  color: var(--light-polish-muted) !important;
+}
+
+/* Metrics remain raised, but are no longer pure white. */
+html[data-theme="light"] #projects .projects-metrics,
+html[data-theme="light"] #projects .credentials-metrics {
+  border-color: var(--light-polish-border) !important;
+  background: linear-gradient(145deg, #e8eff5, #dce7f0) !important;
+  box-shadow: 0 15px 34px rgba(29, 51, 76, 0.13) !important;
+}
+
+html[data-theme="light"] #projects .projects-metrics article,
+html[data-theme="light"] #projects .credentials-metrics article {
+  border-color: rgba(22, 51, 80, 0.2) !important;
+  background: rgba(238, 244, 249, 0.52) !important;
+}
+
+/* =========================================================
+   CERTIFICATE VAULT — stronger hierarchy and text contrast
+   ========================================================= */
+
+html[data-theme="light"] #projects .credential-vault {
+  border-color: var(--light-polish-border) !important;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(0, 127, 137, 0.055), transparent 27%),
+    linear-gradient(145deg, #e4edf5, #d6e3ed) !important;
+  box-shadow:
+    0 27px 64px var(--light-polish-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+html[data-theme="light"] #projects .credential-vault__header {
+  border-bottom-color: rgba(22, 51, 80, 0.21) !important;
+  background: #d9e5ef !important;
+}
+
+html[data-theme="light"] #projects .certificate-feature {
+  border-right-color: rgba(22, 51, 80, 0.2) !important;
+  background: #dfe9f2 !important;
+}
+
+html[data-theme="light"] #projects .certificate-feature__visual {
+  background:
+    radial-gradient(circle at 50% 47%, rgba(0, 127, 137, 0.09), transparent 43%),
+    linear-gradient(145deg, #d8e5ef, #cddce8) !important;
+}
+
+html[data-theme="light"] #projects .certificate-feature__info {
+  border-top-color: rgba(22, 51, 80, 0.2) !important;
+  background: #e5edf5 !important;
+}
+
+html[data-theme="light"] #projects .certificate-grid {
+  background: linear-gradient(180deg, #d6e3ed, #ccdbe7) !important;
+}
+
+html[data-theme="light"] #projects .certificate-card {
+  color: var(--light-polish-text) !important;
+  border-color: rgba(22, 51, 80, 0.24) !important;
+  background: #eaf1f7 !important;
+  box-shadow: 0 9px 20px rgba(29, 51, 76, 0.1) !important;
+}
+
+html[data-theme="light"] #projects .certificate-card:hover,
+html[data-theme="light"] #projects .certificate-card:focus-visible {
+  background: #f0f5f9 !important;
+}
+
+html[data-theme="light"] #projects .certificate-card.is-selected {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--project-accent) 10%, #edf3f8), #e3ecf4) !important;
+}
+
+html[data-theme="light"] #projects .certificate-card__copy strong,
+html[data-theme="light"] #projects .certificate-feature__info h4 {
+  color: var(--light-polish-text) !important;
+}
+
+html[data-theme="light"] #projects .certificate-card__copy small,
+html[data-theme="light"] #projects .certificate-feature__info > p,
+html[data-theme="light"] #projects .certificate-feature__meta {
+  color: var(--light-polish-muted) !important;
+}
+
+/* =========================================================
+   DIGITAL BADGES — tint the large feature panel and shelf
+   ========================================================= */
+
+html[data-theme="light"] #projects .badge-passport.badge-passport--gallery {
+  border-color: color-mix(in srgb, var(--badge-accent) 27%, var(--light-polish-border)) !important;
+  background:
+    radial-gradient(circle at 18% 42%, color-mix(in srgb, var(--badge-accent) 9%, transparent), transparent 31%),
+    linear-gradient(145deg, #e5edf5, #d7e4ee) !important;
+  box-shadow:
+    0 27px 64px var(--light-polish-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+html[data-theme="light"] #projects .badge-passport--gallery .badge-passport__header {
+  background: #dce7f0 !important;
+  border-bottom-color: color-mix(in srgb, var(--badge-accent) 18%, rgba(22, 51, 80, 0.2)) !important;
+}
+
+html[data-theme="light"] #projects .badge-feature.badge-feature--gallery {
+  background:
+    radial-gradient(circle at 20% 52%, color-mix(in srgb, var(--badge-accent) 11%, transparent), transparent 32%),
+    linear-gradient(100deg, #e8eef5 0%, #e2ebf3 56%, #d7e4ee 100%) !important;
+}
+
+html[data-theme="light"] #projects .badge-stage__meta > span {
+  border-color: color-mix(in srgb, var(--badge-accent) 20%, rgba(22, 51, 80, 0.23)) !important;
+  background: #e8eff5 !important;
+  box-shadow: 0 8px 19px rgba(29, 51, 76, 0.11) !important;
+}
+
+html[data-theme="light"] #projects .badge-stage__copy h4 {
+  color: var(--light-polish-text) !important;
+}
+
+html[data-theme="light"] #projects .badge-stage__copy > p,
+html[data-theme="light"] #projects .badge-stage__meta small,
+html[data-theme="light"] #projects .badge-gallery-shell__heading {
+  color: var(--light-polish-muted) !important;
+}
+
+html[data-theme="light"] #projects .badge-passport--gallery .badge-grid {
+  background:
+    radial-gradient(circle at var(--gallery-x, 50%) var(--gallery-y, 50%), color-mix(in srgb, var(--badge-accent) 9%, transparent), transparent 23%),
+    linear-gradient(180deg, #cedde9, #c3d4e1) !important;
+}
+
+html[data-theme="light"] #projects .badge-gallery-card {
+  border-color: color-mix(in srgb, var(--badge-accent) 20%, rgba(22, 51, 80, 0.23)) !important;
+  background:
+    linear-gradient(150deg, color-mix(in srgb, var(--badge-accent) 6%, #edf3f8), #dfe9f2) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 9px 22px rgba(29, 51, 76, 0.12) !important;
+}
+
+html[data-theme="light"] #projects .badge-gallery-card__visual {
+  background: #d5e2ec !important;
+}
+
+/* =========================================================
+   SKILLS — reduce white panels and recover faded orbit text
+   ========================================================= */
+
+html[data-theme="light"] #skills .skills-summary,
+html[data-theme="light"] #skills .skills-orbit-panel,
+html[data-theme="light"] #skills .skills-detail-panel {
+  border-color: var(--light-polish-border) !important;
+  background:
+    linear-gradient(145deg, #e5edf5, #d7e4ee) !important;
+  box-shadow:
+    0 25px 58px var(--light-polish-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+html[data-theme="light"] #skills .skills-orbit-panel__topbar,
+html[data-theme="light"] #skills .skills-detail-header {
+  border-color: rgba(22, 51, 80, 0.2) !important;
+  background: linear-gradient(180deg, #dfe9f2, #d5e2ec) !important;
+}
+
+html[data-theme="light"] #skills .skills-orbit-stage {
+  background:
+    radial-gradient(circle at 50% 54%, rgba(0, 127, 137, 0.09), transparent 25%),
+    radial-gradient(circle at 50% 54%, rgba(101, 73, 217, 0.065), transparent 52%),
+    linear-gradient(145deg, #d5e2ec, #cbdbe7) !important;
+}
+
+/* Inline JS sets opacity/filter to create depth. In light mode the lowest
+   values become unreadable, so preserve depth through scale and z-position
+   while keeping every card legible. */
+html[data-theme="light"] #skills .skill-orbit-card {
+  opacity: 0.74 !important;
+  filter: none !important;
+  color: var(--light-polish-text) !important;
+  border-color: rgba(22, 51, 80, 0.24) !important;
+  background: linear-gradient(145deg, #edf3f8, #dfe9f2) !important;
+  box-shadow:
+    0 14px 32px rgba(29, 51, 76, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68) !important;
+}
+
+html[data-theme="light"] #skills .skill-orbit-card:hover,
+html[data-theme="light"] #skills .skill-orbit-card:focus-visible,
+html[data-theme="light"] #skills .skill-orbit-card.is-selected {
+  opacity: 1 !important;
+  filter: none !important;
+  background: linear-gradient(145deg, #f0f5f9, #e3ecf4) !important;
+}
+
+html[data-theme="light"] #skills .skill-orbit-card h3,
+html[data-theme="light"] #skills .skills-detail-identity h3,
+html[data-theme="light"] #skills .skill-detail-tool__copy strong,
+html[data-theme="light"] #skills .skills-detail-section--evidence > p {
+  color: var(--light-polish-text) !important;
+}
+
+html[data-theme="light"] #skills .skill-orbit-card__category,
+html[data-theme="light"] #skills .skill-orbit-card p,
+html[data-theme="light"] #skills .skills-orbit-panel__topbar,
+html[data-theme="light"] #skills .skills-orbit-progress,
+html[data-theme="light"] #skills .skills-detail-summary,
+html[data-theme="light"] #skills .skills-detail-header > div p,
+html[data-theme="light"] #skills .skills-detail-header__status,
+html[data-theme="light"] #skills .skills-detail-strength > div:first-child,
+html[data-theme="light"] #skills .skills-detail-section header,
+html[data-theme="light"] #skills .skill-detail-tool__copy span,
+html[data-theme="light"] #skills .skills-detail-footer {
+  color: var(--light-polish-muted) !important;
+}
+
+html[data-theme="light"] #skills .skill-detail-tool,
+html[data-theme="light"] #skills .skills-detail-section--evidence {
+  border-color: rgba(22, 51, 80, 0.23) !important;
+  background: #e2ebf3 !important;
+}
+
+html[data-theme="light"] #skills .skill-detail-tool:hover {
+  background: color-mix(in srgb, var(--detail-color) 7%, #edf3f8) !important;
+}
+
+html[data-theme="light"] #skills .skill-detail-tool__logo {
+  border-color: rgba(22, 51, 80, 0.2) !important;
+  background: #d2dfeb !important;
+}
+
+html[data-theme="light"] #skills .skill-detail-tool__logo img {
+  opacity: 0.9 !important;
+  filter: grayscale(1) saturate(0) brightness(0.42) contrast(1.28) !important;
+}
+
+html[data-theme="light"] #skills .skills-filter-button,
+html[data-theme="light"] #skills .skills-motion-toggle,
+html[data-theme="light"] #skills .skills-orbit-control {
+  color: #304b64 !important;
+  border-color: rgba(22, 51, 80, 0.23) !important;
+  background: #e1eaf2 !important;
+}
+
+html[data-theme="light"] #skills .skills-filter-button:hover,
+html[data-theme="light"] #skills .skills-motion-toggle:hover,
+html[data-theme="light"] #skills .skills-orbit-control:hover {
+  color: var(--light-polish-text) !important;
+  background: #edf3f8 !important;
+}
+html[data-theme="light"] #projects .project-index__filters {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   PROJECTS — FINAL LIGHT MODE POLISH
+   Scope: Projects cards and Project popup only
+   ========================================================= */
+
+html[data-theme="light"] #projects {
+  --projects-light-ink: #102138;
+  --projects-light-muted: #3f5870;
+  --projects-light-faint: #587087;
+  --projects-light-line: rgba(23, 52, 79, 0.24);
+
+  --projects-light-panel: #dce7ef;
+  --projects-light-panel-deep: #cfdee9;
+  --projects-light-card: #e8eff5;
+  --projects-light-card-deep: #d7e3ec;
+}
+
+/* =========================================================
+   PROJECT INDEX CARDS
+   ========================================================= */
+
+html[data-theme="light"] #projects .project-card {
+  color: var(--projects-light-ink) !important;
+  border-color: rgba(23, 52, 79, 0.28) !important;
+  background: #d5e2ec !important;
+
+  box-shadow:
+    0 10px 24px rgba(31, 54, 78, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58) !important;
+}
+
+html[data-theme="light"] #projects .project-card:hover,
+html[data-theme="light"] #projects .project-card:focus-visible,
+html[data-theme="light"] #projects .project-card.is-selected {
+  border-color: color-mix(
+    in srgb,
+    var(--card-accent, var(--project-accent)) 58%,
+    rgba(23, 52, 79, 0.28)
+  ) !important;
+
+  box-shadow:
+    0 16px 34px rgba(31, 54, 78, 0.18),
+    0 0 0 1px color-mix(
+      in srgb,
+      var(--card-accent, var(--project-accent)) 18%,
+      transparent
+    ) !important;
+}
+
+/* Make project images clearer */
+html[data-theme="light"] #projects .project-card__image img {
+  filter:
+    saturate(0.88)
+    contrast(0.98)
+    brightness(0.84) !important;
+}
+
+html[data-theme="light"] #projects .project-card:hover .project-card__image img,
+html[data-theme="light"] #projects .project-card:focus-visible .project-card__image img,
+html[data-theme="light"] #projects .project-card.is-selected .project-card__image img {
+  filter:
+    saturate(1)
+    contrast(1)
+    brightness(0.93) !important;
+}
+
+/* Keep only enough dark gradient for readable white text */
+html[data-theme="light"] #projects .project-card__image::after {
+  background:
+    linear-gradient(
+      to top,
+      rgba(8, 22, 36, 0.88) 0%,
+      rgba(8, 22, 36, 0.58) 37%,
+      rgba(8, 22, 36, 0.2) 68%,
+      rgba(8, 22, 36, 0.035) 100%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(
+        in srgb,
+        var(--card-accent, var(--project-accent)) 9%,
+        transparent
+      ),
+      transparent 58%
+    ) !important;
+}
+
+html[data-theme="light"] #projects .project-card__title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(2, 10, 19, 0.58) !important;
+}
+
+html[data-theme="light"] #projects .project-card__subtitle,
+html[data-theme="light"] #projects.projects-popup-mode .project-card__subtitle {
+  color: #e8f0f6 !important;
+  text-shadow: 0 1px 7px rgba(2, 10, 19, 0.58) !important;
+}
+
+html[data-theme="light"] #projects .project-card__category {
+  color: #e0eaf2 !important;
+  text-shadow: 0 1px 7px rgba(2, 10, 19, 0.58) !important;
+}
+
+html[data-theme="light"] #projects .project-card__select,
+html[data-theme="light"] #projects.projects-popup-mode .project-card__select {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.42) !important;
+  background: rgba(12, 30, 46, 0.72) !important;
+  box-shadow: 0 6px 16px rgba(4, 13, 24, 0.24) !important;
+}
+
+/* =========================================================
+   PROJECT POPUP — MAIN CONTAINER
+   ========================================================= */
+
+html[data-theme="light"] #projects .project-dialog {
+  color: var(--projects-light-ink) !important;
+
+  border-color: color-mix(
+    in srgb,
+    var(--project-accent) 35%,
+    rgba(23, 52, 79, 0.3)
+  ) !important;
+
+  background:
+    radial-gradient(
+      circle at 12% 8%,
+      color-mix(
+        in srgb,
+        var(--project-accent-2) 8%,
+        transparent
+      ),
+      transparent 31%
+    ),
+    radial-gradient(
+      circle at 94% 88%,
+      color-mix(
+        in srgb,
+        var(--project-accent) 7%,
+        transparent
+      ),
+      transparent 33%
+    ),
+    #d5e2ec !important;
+
+  box-shadow:
+    0 44px 118px rgba(20, 39, 61, 0.38),
+    0 0 0 1px rgba(255, 255, 255, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog::backdrop {
+  background: rgba(26, 42, 61, 0.48) !important;
+
+  backdrop-filter:
+    blur(17px)
+    saturate(92%) !important;
+
+  -webkit-backdrop-filter:
+    blur(17px)
+    saturate(92%) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog__frame,
+html[data-theme="light"] #projects .project-dialog__viewport,
+html[data-theme="light"] #projects .project-dialog .project-showroom__main {
+  background: transparent !important;
+}
+
+/* Popup top bar */
+html[data-theme="light"] #projects .project-dialog__chrome {
+  color: var(--projects-light-ink) !important;
+  border-bottom: 1px solid var(--projects-light-line) !important;
+  background: rgba(220, 231, 240, 0.96) !important;
+  box-shadow: 0 8px 22px rgba(31, 54, 78, 0.08) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog__mode span {
+  color: color-mix(
+    in srgb,
+    var(--project-accent) 78%,
+    #183b52
+  ) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog__chrome small {
+  color: #4d657c !important;
+}
+
+/* Close button */
+html[data-theme="light"] #projects .project-dialog__close {
+  color: #183047 !important;
+  border-color: rgba(23, 52, 79, 0.31) !important;
+  background: #d2e0ea !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.62),
+    0 7px 16px rgba(31, 54, 78, 0.11) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog__close:hover,
+html[data-theme="light"] #projects .project-dialog__close:focus-visible {
+  color: #102138 !important;
+
+  border-color: color-mix(
+    in srgb,
+    var(--project-accent) 58%,
+    rgba(23, 52, 79, 0.31)
+  ) !important;
+
+  background: color-mix(
+    in srgb,
+    var(--project-accent) 11%,
+    #dce7ef
+  ) !important;
+}
+
+/* =========================================================
+   PROJECT POPUP — LEFT VISUAL AREA
+   ========================================================= */
+
+html[data-theme="light"] #projects .project-dialog .project-visual-stage {
+  border-right-color: rgba(23, 52, 79, 0.24) !important;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      color-mix(
+        in srgb,
+        var(--project-accent) 7%,
+        transparent
+      ),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #cbdbe7,
+      #becfdd
+    ) !important;
+}
+
+/* Blurred screenshots in the background */
+html[data-theme="light"] #projects .project-slider-backdrop img {
+  opacity: 0.24 !important;
+
+  filter:
+    blur(30px)
+    saturate(0.86)
+    brightness(0.94) !important;
+}
+
+html[data-theme="light"] #projects .project-slider-backdrop img.is-changing {
+  opacity: 0.13 !important;
+
+  filter:
+    blur(36px)
+    saturate(0.78)
+    brightness(0.88) !important;
+}
+
+html[data-theme="light"] #projects .project-slider-backdrop::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(210, 224, 235, 0.3),
+      rgba(190, 207, 220, 0.62)
+    ),
+    radial-gradient(
+      circle at 50% 42%,
+      transparent 0 23%,
+      rgba(211, 225, 235, 0.25) 68%,
+      rgba(181, 199, 214, 0.61) 100%
+    ) !important;
+}
+
+/* Screenshot cards */
+html[data-theme="light"] #projects .project-dialog .project-slider-slide {
+  color: var(--projects-light-ink) !important;
+
+  border-color: color-mix(
+    in srgb,
+    var(--project-accent) 34%,
+    rgba(23, 52, 79, 0.32)
+  ) !important;
+
+  background: #dce7ef !important;
+
+  box-shadow:
+    0 22px 56px rgba(24, 45, 68, 0.22) !important;
+
+  opacity: 0.52 !important;
+
+  filter:
+    blur(4px)
+    saturate(0.82)
+    brightness(0.9) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog .project-slider-slide.is-active {
+  opacity: 1 !important;
+  filter: none !important;
+
+  border-color: color-mix(
+    in srgb,
+    var(--project-accent) 70%,
+    rgba(23, 52, 79, 0.22)
+  ) !important;
+
+  box-shadow:
+    0 27px 68px rgba(24, 45, 68, 0.28),
+    0 0 32px color-mix(
+      in srgb,
+      var(--project-accent) 11%,
+      transparent
+    ),
+    inset 0 1px 0 rgba(255, 255, 255, 0.56) !important;
+}
+
+/* Screenshot browser bar */
+html[data-theme="light"] #projects .project-slider-slide__chrome {
+  color: #38536b !important;
+  border-bottom-color: rgba(23, 52, 79, 0.2) !important;
+  background: #cfdee9 !important;
+}
+
+html[data-theme="light"] #projects .project-slider-slide__chrome > span {
+  background: color-mix(
+    in srgb,
+    var(--project-accent) 65%,
+    #60788c
+  ) !important;
+}
+
+/* Remove dark black background around screenshots */
+html[data-theme="light"] #projects .project-slider-slide__canvas,
+html[data-theme="light"] #projects .project-slider-slide__canvas img {
+  background: #dbe6ee !important;
+}
+
+html[data-theme="light"] #projects .project-slider-slide__canvas img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* =========================================================
+   PROJECT POPUP — RIGHT INFORMATION PANEL
+   ========================================================= */
+
+html[data-theme="light"] #projects .project-dialog .project-detail-panel {
+  color: var(--projects-light-ink) !important;
+  border-color: rgba(23, 52, 79, 0.24) !important;
+
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      color-mix(
+        in srgb,
+        var(--project-accent-2) 6%,
+        transparent
+      ),
+      transparent 29%
+    ),
+    linear-gradient(
+      145deg,
+      #e3ecf3,
+      #d8e5ee
+    ) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog .project-detail-panel::before {
+  opacity: 0.92 !important;
+}
+
+html[data-theme="light"] #projects .project-dialog .project-detail-panel__body {
+  color: var(--projects-light-ink) !important;
+  background: transparent !important;
+
+  scrollbar-color:
+    rgba(59, 92, 119, 0.52)
+    transparent !important;
+
+  justify-content: flex-start !important;
+  gap: 16px !important;
+}
+
+/* Project number and section headings */
+html[data-theme="light"] #projects .project-dialog .project-detail-heading p,
+html[data-theme="light"] #projects .project-dialog .project-detail-block__heading span,
+html[data-theme="light"] #projects .project-dialog .project-detail-outcome span {
+  color: color-mix(
+    in srgb,
+    var(--project-accent) 80%,
+    #16435a
+  ) !important;
+}
+
+/* Main project title */
+html[data-theme="light"] #projects .project-dialog .project-detail-heading h3 {
+  color: #0d1e33 !important;
+}
+
+/* Project subtitle */
+html[data-theme="light"] #projects .project-dialog .project-detail-heading strong {
+  color: #3b536b !important;
+}
+
+/* Project description */
+html[data-theme="light"] #projects .project-dialog .project-detail-summary {
+  color: #334e67 !important;
+}
+
+/* Divider lines */
+html[data-theme="light"] #projects .project-dialog .project-detail-block {
+  border-top-color: rgba(23, 52, 79, 0.22) !important;
+}
+
+/* Core-function cards */
+html[data-theme="light"] #projects .project-dialog .project-detail-feature {
+  color: #183047 !important;
+
+  border-color: color-mix(
+    in srgb,
+    var(--project-accent) 25%,
+    rgba(23, 52, 79, 0.24)
+  ) !important;
+
+  background: #d5e2eb !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 5px 12px rgba(31, 54, 78, 0.07) !important;
+}
+
+/* Tools cards */
+html[data-theme="light"] #projects .project-dialog .project-tool {
+  color: #2d465d !important;
+  border-color: rgba(23, 52, 79, 0.24) !important;
+  background: #d7e3ec !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 5px 12px rgba(31, 54, 78, 0.07) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog .project-tool:hover,
+html[data-theme="light"] #projects .project-dialog .project-tool:focus-visible {
+  color: #102138 !important;
+
+  border-color: color-mix(
+    in srgb,
+    var(--tool-color, var(--project-accent)) 45%,
+    rgba(23, 52, 79, 0.24)
+  ) !important;
+
+  background: color-mix(
+    in srgb,
+    var(--tool-color, var(--project-accent)) 8%,
+    #dce7ef
+  ) !important;
+
+  transform: none !important;
+}
+
+/* Tool icons */
+html[data-theme="light"] #projects .project-dialog .project-tool__icon {
+  color: #183047 !important;
+  background: #c7d6e2 !important;
+}
+
+html[data-theme="light"] #projects .project-dialog .project-tool__icon img {
+  opacity: 1 !important;
+
+  filter:
+    grayscale(1)
+    contrast(1.35)
+    brightness(0.68) !important;
+}
+
+html[data-theme="light"] #projects .project-dialog .project-tool:hover .project-tool__icon img,
+html[data-theme="light"] #projects .project-dialog .project-tool:focus-visible .project-tool__icon img {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Project outcome */
+html[data-theme="light"] #projects .project-dialog .project-detail-outcome {
+  color: #173149 !important;
+
+  border-color: color-mix(
+    in srgb,
+    var(--project-accent) 31%,
+    rgba(23, 52, 79, 0.25)
+  ) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(
+        in srgb,
+        var(--project-accent) 7%,
+        #d7e4ed
+      ),
+      color-mix(
+        in srgb,
+        var(--project-accent-2) 5%,
+        #e1eaf1
+      )
+    ) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.54),
+    0 8px 18px rgba(31, 54, 78, 0.08) !important;
+
+  margin-top: 10px !important;
+}
+
+html[data-theme="light"] #projects .project-dialog .project-detail-outcome p {
+  color: #203c55 !important;
+}
+
+/* Smaller laptop protection */
+@media (max-width: 1180px) {
+  html[data-theme="light"] #projects .project-dialog .project-slider-slide__canvas,
+  html[data-theme="light"] #projects .project-slider-slide__canvas img {
+    background: #d6e2eb !important;
+  }
+}

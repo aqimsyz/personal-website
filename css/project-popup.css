@@ -1,0 +1,271 @@
+#projects .project-dialog .project-showroom__main {
+  grid-template-columns: minmax(0, 1.18fr) minmax(430px, 0.82fr) !important;
+}
+#projects .project-dialog .project-detail-panel__header,
+#projects .project-dialog .project-visual-stage__hud,
+#projects .project-dialog .project-screen--main figcaption,
+#projects .project-dialog #project-browser-label,
+#projects .project-dialog .project-detail-block:has(#project-detail-contribution),
+#projects .project-dialog .project-detail-block__heading small {
+  display: none !important;
+}
+
+#projects .project-dialog .project-detail-panel {
+  grid-template-rows: minmax(0, 1fr) !important;
+}
+
+#projects .project-dialog .project-detail-panel__body {
+  gap: 18px !important;
+  padding: 28px 30px 26px !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
+}
+
+#projects .project-dialog .project-detail-heading p {
+  margin: 0 0 9px !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.18em !important;
+}
+
+#projects .project-dialog .project-detail-heading h3 {
+  font-size: clamp(40px, 3.4vw, 60px) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.055em !important;
+  overflow-wrap: anywhere;
+}
+
+#projects .project-dialog .project-detail-heading strong {
+  margin-top: 11px !important;
+  font-size: clamp(16px, 1.35vw, 21px) !important;
+  line-height: 1.3 !important;
+}
+
+#projects .project-dialog .project-detail-summary {
+  display: block !important;
+  overflow: visible !important;
+  font-size: 15px !important;
+  line-height: 1.58 !important;
+  -webkit-line-clamp: unset !important;
+}
+
+#projects .project-dialog .project-detail-block {
+  padding-top: 15px !important;
+}
+
+#projects .project-dialog .project-detail-block__heading span,
+#projects .project-dialog .project-detail-outcome span {
+  font-size: 9px !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.17em !important;
+}
+
+/* Core function chips */
+#projects .project-dialog .project-detail-features {
+  gap: 9px !important;
+  margin-top: 12px !important;
+}
+
+#projects .project-dialog .project-detail-feature {
+  min-height: 40px !important;
+  gap: 9px !important;
+  padding: 7px 13px !important;
+  border-radius: 11px !important;
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+}
+
+#projects .project-dialog .project-detail-feature::before {
+  width: 6px !important;
+}
+
+/* Tool chips, names and logos */
+#projects .project-dialog .project-detail-tools {
+  gap: 10px !important;
+  margin-top: 12px !important;
+}
+
+#projects .project-dialog .project-tool {
+  min-height: 45px !important;
+  gap: 10px !important;
+  padding: 7px 13px !important;
+  border-radius: 11px !important;
+  font-size: 12px !important;
+  line-height: 1.25 !important;
+}
+
+#projects .project-dialog .project-tool__icon {
+  width: 25px !important;
+  border-radius: 7px !important;
+  font-size: 9px !important;
+}
+
+/* Keep the glow, but prevent the tool chip from floating upward. */
+#projects .project-dialog .project-tool:hover,
+#projects .project-dialog .project-tool:focus-visible {
+  transform: none !important;
+}
+
+/* Project outcome */
+#projects .project-dialog .project-detail-outcome {
+  margin-top: auto !important;
+  padding: 17px 18px 17px 22px !important;
+  border-radius: 15px !important;
+}
+
+#projects .project-dialog .project-detail-outcome p {
+  display: block !important;
+  margin-top: 8px !important;
+  overflow: visible !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  -webkit-line-clamp: unset !important;
+}
+#projects .project-dialog .project-screen__browser {
+  justify-content: flex-start !important;
+  gap: 8px !important;
+}
+
+@media (max-width: 1180px) {
+  #projects .project-dialog .project-showroom__main {
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.82fr) !important;
+  }
+
+  #projects .project-dialog .project-detail-panel__body {
+    padding: 24px 24px 22px !important;
+  }
+
+  #projects .project-dialog .project-detail-heading h3 {
+    font-size: clamp(34px, 4.2vw, 50px) !important;
+  }
+}
+
+#projects .project-dialog .project-slider-slide__chrome strong {
+  display: none !important;
+}
+
+#projects .project-dialog .project-slider-slide figcaption {
+  display: none !important;
+}
+
+#projects .project-dialog .project-slider-slide {
+  grid-template-rows: 42px minmax(0, 1fr) !important;
+}
+#projects .project-dialog .project-slider-slide__chrome {
+  justify-content: flex-start !important;
+}
+#projects .project-dialog .project-detail-outcome {
+  margin-top: 10px !important;
+}
+
+#projects .project-dialog .project-detail-panel__body {
+  justify-content: flex-start !important;
+  gap: 16px !important;
+}
+
+#projects .project-dialog .project-detail-heading p {
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.16em !important;
+}
+
+#projects .project-dialog .project-detail-block > span,
+#projects .project-dialog .project-detail-block__heading span,
+#projects .project-dialog .project-detail-outcome span {
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0.16em !important;
+}
+
+#projects .project-dialog .project-detail-feature {
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+}
+
+#projects .project-dialog .project-tool {
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+}
+
+#projects .project-dialog .project-tool__icon {
+  width: 26px !important;
+  height: 26px !important;
+}
+
+#projects .project-dialog .project-detail-outcome p {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+#projects .project-dialog .project-slider-slide__canvas {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+
+  padding: 8px !important;
+  overflow: hidden !important;
+
+  background: #050d19 !important;
+}
+
+#projects
+  .project-dialog
+  .project-slider-slide__canvas
+  > img {
+  position: relative !important;
+  inset: auto !important;
+  z-index: 2 !important;
+
+  display: block !important;
+  flex: 0 0 auto !important;
+
+  width: auto !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: scale-down !important;
+  object-position: center center !important;
+
+  margin: auto !important;
+  padding: 0 !important;
+
+  transform: none !important;
+  scale: 1 !important;
+
+  clip-path: none !important;
+}
+
+#projects
+  .project-dialog
+  .project-slider-slide__canvas::before {
+  display: none !important;
+}
+
+#projects
+  .project-dialog
+  .project-slider-slide__canvas::after {
+  background: rgba(2, 8, 17, 0.04) !important;
+}
+
+#projects
+  .project-dialog
+  .project-slider-slide__canvas
+  > img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  transform: none !important;
+}

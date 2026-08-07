@@ -1,0 +1,27 @@
+:root {
+  --bg-primary: #05070c;
+  --bg-secondary: #0a1020;
+  --text-primary: #f8fbff;
+  --text-secondary: #9ba8bd;
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #22d3ee;
+  --accent-blue: #4f8cff;
+  --glass-bg: rgba(12, 20, 36, 0.56);
+  --glass-border: rgba(255, 255, 255, 0.13);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --blur: 24px;
+  --page-gutter: clamp(20px, 6vw, 96px);
+}
+
+html[data-theme="light"] {
+  --bg-primary: #f4f7fb;
+  --bg-secondary: #e6edf6;
+  --text-primary: #0b1220;
+  --text-secondary: #526079;
+  --accent-purple: #6d3de8;
+  --accent-cyan: #007f98;
+  --accent-blue: #275fd6;
+  --glass-bg: rgba(255, 255, 255, 0.68);
+  --glass-border: rgba(12, 24, 48, 0.12);
+}
