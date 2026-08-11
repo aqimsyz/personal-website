@@ -7,10 +7,8 @@ window.PORTFOLIO_CONFIG = {
     connectionDistance: 115,
     messages: [
     "LOADING MY PORTFOLIO",
-    "GETTING MY PROJECTS READY",
-    "ORGANIZING MY SKILLS",
-    "PREPARING MY PROFILE",
-    "WELCOME TO MY WEBSITE"
+    "GETTING MY CONTENT READY",
+    "WELCOME TO MY WEBSITE",
     ]
   }
 };
