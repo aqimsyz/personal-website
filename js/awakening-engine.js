@@ -275,13 +275,13 @@
   }
 
   function setStep(index, progress) {
-    const messages = loaderConfig.messages || [
-      "INITIALIZING SYSTEM CORE",
-      "CALIBRATING PARTICLE NETWORK",
-      "SYNCHRONIZING DIGITAL IDENTITY",
-      "RECONSTRUCTING DIGITAL PROFILE",
-      "EXPERIENCE READY"
-    ];
+  const messages = loaderConfig.messages || [
+    "LOADING MY PORTFOLIO",
+    "GETTING MY PROJECTS READY",
+    "ORGANIZING MY SKILLS",
+    "PREPARING MY PROFILE",
+    "WELCOME TO MY WEBSITE"
+  ];
 
     if (message) message.textContent = messages[index] || messages[messages.length - 1];
     if (progressBar) progressBar.style.width = `${progress}%`;
