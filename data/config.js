@@ -1,7 +1,3 @@
-/**
- * EASY UPDATE FILE
- * Change your name and loader wording here.
- */
 window.PORTFOLIO_CONFIG = {
   ownerName: "SYAZWAN AQIM",
   loader: {
