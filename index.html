@@ -1264,5 +1264,61 @@
   <script src="js/skills-experience.js"></script>
   <script src="js/projects-experience.js"></script>
   <script src="js/contact.js"></script>
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  function trackEvent(eventName, parameters = {}) {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, parameters);
+    }
+  }
+  document.querySelectorAll(
+    'a[href*="Syazwan_Aqim_Resume.pdf"]'
+  ).forEach(function(link) {
+    link.addEventListener("click", function() {
+      trackEvent("resume_download", {
+        file_name: "Syazwan_Aqim_Resume.pdf"
+      });
+    });
+  });
+  const linkedin = document.querySelector(
+    'a[href*="linkedin.com/in/aqimsyazwan"]'
+  );
+
+  if (linkedin) {
+    linkedin.addEventListener("click", function() {
+      trackEvent("linkedin_click");
+    });
+  }
+  const github = document.querySelector(
+    'a[href*="github.com/aqimsyz"]'
+  );
+
+  if (github) {
+    github.addEventListener("click", function() {
+      trackEvent("github_click");
+    });
+  }
+  const emailLink = document.querySelector(
+    "[data-contact-email-link]"
+  );
+
+  if (emailLink) {
+    emailLink.addEventListener("click", function() {
+      trackEvent("contact_click");
+    });
+  }
+  const contactForm = document.querySelector("#contact-form");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function() {
+      trackEvent("contact_form_submit");
+    });
+  }
+
+});
+</script>
+
 </body>
 </html>
