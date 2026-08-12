@@ -609,14 +609,32 @@
     syncProjectCards();
   }
 
-  function selectProject(projectId, { openDialog = false, trigger = null } = {}) {
-    if (!projectData.projects.some(project => project.id === projectId)) return;
-    state.selectedProjectId = projectId;
-    state.visualIndex = 0;
-    updateSelectedProject();
+function selectProject(projectId, { openDialog = false, trigger = null } = {}) {
+  const project = projectData.projects.find(
+    project => project.id === projectId
+  );
 
-    if (openDialog) openProjectDialog(trigger);
+  if (!project) return;
+
+  state.selectedProjectId = projectId;
+  state.visualIndex = 0;
+  updateSelectedProject();
+
+  if (openDialog) {
+
+    // Google Analytics - track which project was opened
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "project_view", {
+        project_name: project.title,
+        project_id: project.id,
+        project_category:
+          projectCategoryMap[project.category] || project.category
+      });
+    }
+
+    openProjectDialog(trigger);
   }
+}
 
   function setupProjectIndexExperience() {
     root.classList.add("projects-popup-mode");
