@@ -26,12 +26,8 @@
     !navbar
   ) return;
 
-  // Promote the rope and clamp to the document level so the lanyard can
-  // visibly originate from the fixed navbar instead of the About card column.
   document.body.append(lanyardSvg, lanyardAnchor);
 
-  // Add repeated UiTM branding directly onto the live SVG rope path.
-  // This is created in JavaScript so no HTML structure change is needed.
   const svgNamespace = "http://www.w3.org/2000/svg";
   const lanyardText = document.createElementNS(svgNamespace, "text");
   const lanyardTextPath = document.createElementNS(svgNamespace, "textPath");
@@ -201,8 +197,6 @@
 
     render();
 
-    // Position everything correctly while hidden, then reveal it on the next
-    // paint. This prevents the rope from visibly jumping into the navbar.
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         zone.classList.add("is-present");
@@ -224,8 +218,7 @@
   }
 
   function attachmentPoint() {
-    // The card rotates around its centre. The lanyard ends inside the
-    // horizontal slot of the metal clip, so it never appears cut.
+ 
     const localY = -geometry.cardHeight / 2 - 6;
 
     return {
@@ -237,8 +230,6 @@
   function applyPhysics(dt) {
     const gravity = 1280;
     const airDrag = Math.pow(.988, dt * 60);
-
-    // Spring the visible strap length between its collapsed and full states.
     const ropeSpring = state.presence === "leaving" ? 34 : 25;
     const ropeDamping = state.presence === "leaving" ? 10.5 : 8.2;
     state.ropeScaleVelocity +=
@@ -262,9 +253,6 @@
     } else {
       state.vy += gravity * dt;
 
-      // A real hanging card naturally returns beneath its anchor. This gentle
-      // tangential restoring force helps the numerical simulation settle there
-      // after a throw without snapping or looking scripted.
       const activeRestX = geometry.anchorX;
       const activeRestY = geometry.anchorY + activeCenterDistance;
       const restDx = activeRestX - state.x;
@@ -276,8 +264,7 @@
       state.vy += restDy * returnStrength * .56 * dt;
     }
 
-    // Bilateral rope constraint: the strap stays taut whether the card is
-    // pulled farther away or pushed closer to the navbar.
+
     let dx = state.x - geometry.anchorX;
     let dy = state.y - geometry.anchorY;
     let distance = Math.max(1, Math.hypot(dx, dy));
@@ -297,8 +284,6 @@
     state.x += state.vx * dt;
     state.y += state.vy * dt;
 
-    // Strong positional correction prevents visual stretching and guarantees
-    // that the SVG strap endpoint remains connected to the clip while dragging.
     dx = state.x - geometry.anchorX;
     dy = state.y - geometry.anchorY;
     distance = Math.max(1, Math.hypot(dx, dy));
@@ -312,13 +297,11 @@
     state.x -= nx * correction;
     state.y -= ny * correction;
 
-    // Remove residual radial velocity so the body moves like a pendulum.
     const correctedRadialVelocity = state.vx * nx + state.vy * ny;
     const radialRemoval = state.dragging ? .36 : .9;
     state.vx -= nx * correctedRadialVelocity * radialRemoval;
     state.vy -= ny * correctedRadialVelocity * radialRemoval;
 
-    // The card tilts from pendulum angle and release momentum.
     const pendulumAngle = Math.atan2(
       state.x - geometry.anchorX,
       Math.max(40, state.y - geometry.anchorY)
@@ -335,7 +318,6 @@
     state.angularVelocity += angularAcceleration * dt;
     state.angle += state.angularVelocity * dt;
 
-    // Soft horizontal safety bounds. The rope constraint handles vertical travel.
     const halfWidth = geometry.cardWidth / 2;
     const left = halfWidth + 3;
     const right = geometry.width - halfWidth - 3;
@@ -352,7 +334,6 @@
 
     state.angle = clamp(state.angle, -.68, .68);
 
-    // Settle precisely at the original hanging position once motion becomes tiny.
     if (
       !state.dragging &&
       state.presence === "visible" &&
@@ -559,8 +540,6 @@
       return;
     }
 
-    // Double-frame measurement ensures the fixed navbar has its final size and
-    // position before the card or strap becomes visible.
     requestAnimationFrame(() => {
       measure(false);
       render();
@@ -627,13 +606,9 @@
     const navbarRect = navbar.getBoundingClientRect();
     const viewportHeight = window.innerHeight;
 
-    // Enter while the first About screen is moving into view.
     const hasEnteredViewport =
       introRect.top < viewportHeight * .82;
 
-    // Leave before the timeline/journey becomes the main screen.
-    // Requiring a meaningful amount of the intro to remain below the navbar
-    // prevents the card from covering later About subsections.
     const introStillOwnsScreen =
       introRect.bottom > navbarRect.bottom + Math.min(190, viewportHeight * .22);
 
@@ -657,8 +632,6 @@
     presenceEvaluationFrame = requestAnimationFrame(evaluateAboutIntroPresence);
   }
 
-  // IntersectionObserver wakes the evaluator efficiently, while the scroll
-  // evaluator determines the exact transition point inside the About section.
   const introObserver = new IntersectionObserver(
     schedulePresenceEvaluation,
     {
