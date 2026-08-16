@@ -273,12 +273,6 @@ html[data-theme="light"] .menu-toggle {
   border-radius: 70%;
 }
 
-.navbar {
-  width: calc(100vw - 32px) !important;
-  max-width: none !important;
-  box-sizing: border-box;
-}
-
 .logo-orb > i {
   z-index: 3;
 }
