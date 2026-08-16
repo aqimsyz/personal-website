@@ -1717,8 +1717,6 @@ html[data-theme="light"] #contact .contact-heading__availability {
 #contact .contact-title--inside span {
   display: inline;
 }
-
-   /* FIX: LET'S CONNECT ONE LINE */
 #contact .contact-title--inside {
   white-space: nowrap;
   font-size: clamp(52px, 4vw, 72px);
@@ -1736,6 +1734,28 @@ html[data-theme="light"] #contact .contact-heading__availability {
 #contact .contact-form-panel__top p {
   width: 100%;
   max-width: none;
+}
+
+#contact h2#contact-title.contact-title--inside {
+  white-space: nowrap !important;
+  font-size: 64px !important;
+  line-height: 1 !important;
+}
+
+#contact h2#contact-title.contact-title--inside > span {
+  display: inline !important;
+}
+
+#contact .contact-form-panel__top > div:first-child {
+  width: 100% !important;
+  max-width: none !important;
+  flex: 1 1 100% !important;
+}
+
+#contact .contact-form-panel__top p {
+  width: 100% !important;
+  max-width: none !important;
+  white-space: nowrap !important;
 }
 
   #contact .contact-footer {
