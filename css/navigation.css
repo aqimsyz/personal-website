@@ -224,9 +224,12 @@ html[data-theme="light"] .theme-toggle__moon {
   }
 }
 
-
-/* MODULE 03.1 — Light navigation contrast */
-html[data-theme="light"] .nav-indicator {
+.navbar {
+  width: calc(100vw - 32px) !important;
+  max-width: none !important;
+  box-sizing: border-box;
+  
+}html[data-theme="light"] .nav-indicator {
   border-color: rgba(12,24,48,.12);
   background: rgba(12,24,48,.055);
   box-shadow: inset 0 1px rgba(255,255,255,.9);
