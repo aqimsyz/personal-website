@@ -223,11 +223,6 @@ html[data-theme="light"] .theme-toggle__moon {
     transform: translate(-50%, -50%) scale(130);
   }
 }
-
-.navbar {
-  width: calc(100vw - 32px) !important;
-  max-width: none !important;
-  box-sizing: border-box;
   
 }html[data-theme="light"] .nav-indicator {
   border-color: rgba(12,24,48,.12);
@@ -276,6 +271,12 @@ html[data-theme="light"] .menu-toggle {
   object-position: center;
 
   border-radius: 70%;
+}
+
+.navbar {
+  width: calc(100vw - 32px) !important;
+  max-width: none !important;
+  box-sizing: border-box;
 }
 
 .logo-orb > i {
